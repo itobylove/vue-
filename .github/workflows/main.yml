@@ -29,15 +29,10 @@ jobs:
         WELCOME: "ssh scp ssh pipelines"
         LASTSSH: "Doing something after copying"
       with:
-      	#服务器IP
         host: ${{ secrets.USER_HOST }}
-	#服务器用户名
         user: ${{ secrets.USER_NAME }}
-	#服务器密码
         pass: ${{ secrets.USER_PASS }}
         connect_timeout: 10s
-	#项目打包路径
         local: './dist/*'
-	#服务器存放项目路径
         remote: /var/www/html/vue/demo1/dist
 
